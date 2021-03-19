@@ -208,18 +208,18 @@
     //add last one events
     let last_nft = {
         tokenID: 20000,
-        name: 'THIS ONE',
+        name: 'The 100th',
         transfers: [],
         positions: [],
         last_value: 0,
-        createdAt:  new Date('March 24, 2021 00:00:00').getTime(),
+        createdAt:  new Date('March 19, 2021 00:00:00').getTime(),
         createdBy : creatorAddress,
         last_owner: creatorAddress,
     }
 
     nfts.set(20000,last_nft);
 
-    maxTime = last_nft.createdAt;
+    maxTime = new Date('April 01, 2021 00:00:00').getTime();//last_nft.createdAt;
     console.log(maxTime);
     console.log(minTime);
 
@@ -373,10 +373,10 @@
         let collectors_count = new Map();
         let number_created = 0;
 
-        //let f_anim = (performance.now()-lastClick)/5000;
-        let f_anim = n_frame/300.0;//(performance.now()-lastClick)/5000;
-        let global_end = Math.max(Math.min(1.0,(380-n_frame)/30.0),0.0);
-        global_end = 1.0;
+        let f_anim = (performance.now()-lastClick)/5000;
+        //let f_anim = n_frame/300.0;//(performance.now()-lastClick)/5000;
+        //let global_end = Math.max(Math.min(1.0,(380-n_frame)/30.0),0.0);
+        let global_end = 1.0;
         //let f_anim = mousex/1024.0;
 
         for (let key of nfts.keys()) {
